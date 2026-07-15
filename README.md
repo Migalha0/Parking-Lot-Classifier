@@ -9,6 +9,7 @@ This tool allows for a quick classification of busy-free parking spaces in a par
 - scikit-learn
 - scikit-image
 - numpy
+- pickle
 - Kaggle
 
 ## Data used

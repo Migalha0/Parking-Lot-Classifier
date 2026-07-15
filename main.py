@@ -12,6 +12,8 @@ from sklearn.metrics import accuracy_score
 
 import typing
 
+import pickle
+
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # data prep
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -90,5 +92,15 @@ score = accuracy_score(y_prediction, y_test)
 print(f'y PREDICTION {y_prediction}\ny VALUE {y_test}\nSCORE {score}')
 
 #endregion
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# saving model
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#region
+
+pickle.dump(best_estimator, open('./saved_model/model.p','wb'))
+
+#endregion
+
 
 # Since classifying parking spots is fairly easy, with this simple model we get 95%+ accuracy
